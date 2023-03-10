@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+</head>
+<body>
+    <h1 align="center">Tienda de ropa en linea</h1>
+<form method="post" action="" enctype="texte/plain">
+<fieldset style="background-color:black;">
+<legend style="background-color: goldenrod;">Informacion del cliente</legend>
+<table>
+<tr style="color: goldenrod;">
+<th align="left" width="25%"><label for="nombre">Nombre:</label><br>
+<input type="text" name="nombre" id="nombre" maxlength="25" /></th>
+<th align="left" width="25%"><label for="ap">Apellido paterno:</label><br>
+<input type="text" name="ap" id="ap" maxlength="25" /></th>
+<th align="left" width="25%"><label for="am">Apellido materno:</label><br>
+<input type="text" name="am" id="am" maxlength="25" /></th>
+</tr>
+<tr style="color: goldenrod">
+<th align="left" width="25%"><label for="usuario">Nombre de usuario:</label><br>
+<input type="text" name="usuario" id="usuario" maxlength="12" placeholder="usuario" size="10" title="nombre de usuario"/></th>
+<th align="left" width="25%"><label for="password">Contraseña:</label><br>
+<input name="pass" type="password" placeholder="password" size="15" maxlength="20"></th>
+</tr>
+</table>
+</fieldset>
+   
+<br><br>
+<form method="post" action="" enctype="texte/plain">
+<fieldset style="background-color:black;">
+<legend style="background-color:goldenrod;">Datos de facturación</legend>
+<table>
+<tr style="color: goldenrod">
+<th align="left" width="25%"><label for="calle">Calle:</label>
+<input name="calle" type="text" title="Escribe un comentario" id="calle"></th>
+<th align="left" width="25%"><label for="#">Numero:</label>
+<input name="#" type="text" title="#" id="#"></th>
+<th align="left" width="25%"><label for="col">Colonia:</label>
+<input name="col" type="text" title="col" id="col"></th>
+</tr>
+<tr style="color: goldenrod">
+<th align="left" width="25%"><label for="mail">E-mail</label>
+<input type="email" name="correo" id="correo" placeholder="Correo electronico"><br></th>
+<th align="left" width="25%"><label for="cp">Codigo postal:</label>
+<input name="cp" type="text" title="Escribe un cp" id="cp"></th>
+<th align="left" width="25%"><label for="rfc">RFC:</label>
+<input name="rfc" type="text" title="rfc" id="rfc"></th>
+</tr>
+<tr style="color: goldenrod">
+<th align="left" width="25%"><label for="fechan">Fecha de venta</label>
+<input type="date" name="fechav" id="fechav" placeholder="Fecha de venta" /></th>
+</tr>
+</table>
+</fieldset>
+<br><br>
+<form method="post" action="" enctype="texte/plain">
+<fieldset style="background-color: black;">
+<legend style="background-color: goldenrod;">Datos de artículo adquirido</legend>
+<table>
+<tr style="color: goldenrod;">
+<th align="left" width="25%"><h3>Tipo:</h3>
+<select name="Ropa">
+<optgroup label="Tipo"><br>
+<option selected>Vestido</option><br>
+<option>Falda</option><br>
+<option>Pantalon</option><br>
+<option>Playera</option><br>
+<option>Camisa</option><br>
+</optgroup>
+</select></th>
+   
+<th align="left" width="25%"><h3>Talla:</h3>
+<input type="radio" name="genero" id="genero" value="C" />
+<label for="genero">Chica</label><br>
+<input type="radio" name="genero" id="genero" value="M" />
+<label for="genero">Mediana</label><br>
+<input type="radio" name="genero" id="genero" value="G" />
+<label for="genero">Grande</label></th>
+   
+<th align="left" width="25%"><label>Selecciona el color:</label>
+<input type="color"></th>
+<th><input name="boton" type="submit" value="Enviar">
+    <input name="boton" type="reset" value="Borrar"></th>
+</tr>
+</table>
+</fieldset>
+                   
+    </form>
+    <h2 align="right">©Distribuidora de ropa en linea 2023</h2>
+    <h3 align="right">Garcia Valencia Aldo Esteban</h3>
+</body>
+</html>
