@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3 (P2)</title>
+</head>
+<body background="ayuda-sismo-cinepolis-1024x559.jpg" style="background-repeat: no-repeat; background-size: 100%; background-attachment: fixed;" style="color:white">
+    <center><img src="large_thumbnail.jpg" height="150px" width="30%"></center>
+    <h1 align="center" style="color: white;">Cartelera</h1>
+    <table border="2" align="center" height="30%" width="80%">
+        <thead>
+            <tr style="color: white;">
+                <th><img src="41492-612210-20230215084443.jpg" height="275px%" width="80%"></th>
+                <th><img src="pu5u25f2enavdf7ojppu3hf7zq-1666108043.jpeg" width="50%" height="275px"></th>
+                <th><img src="MV5BODAwZDQ5ZjEtZDI1My00MTFiLTg0ZjUtOGE2YTBkOTdjODFhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" width="60%" height="300px"></th>
+                <th><img src="mando.jfif" width="80%" height="275px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><img src="super_mario_bros_la_pelicula-cartel-10708m.jpg" width="80%" height="275px"></th>
+                <th><img src="A_Shazam_La_furia_de_los_dioses-942384944-large.jpg" width="50%" height="250px"></th>
+                <th><img src="41139-197220-20221221021943.jpg" width="50%" height="275px"></th>
+                <th><img src="intoThespiderverse.jfif" width="50%" height="275px"></th>
+            </tr>
+        </tbody>
+    </table>
+    <h3 style="color: white;">Registrate o inicia sesion aqui!</h3>
+    <form method="post" action="" 
+    enctype="text/plain">
+    <fieldset style="color: white;">
+        <legend>Inicia sesion/Registrate</legend>
+        <label for="Usuario">
+        Nombre de usuario:
+        </label>
+        <input type="text" name="usuario" id="usuario" maxlength="12"
+        placeholder="usuario" size="5"  title="Nombre de usuario"/><br/>
+        
+        <label for="correo">E-mail</label><br/>
+        <input type="email" name="correo"
+        id="correo"
+        placeholder="Correo electrónico"><br/>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+        id="nombre" maxlength="25" placeholder="Nombre"/><br/>
+        <label for="ap">Apellidos</label>
+        <input type="text" name="ap" id="ap" maxlength="25" placeholder="Apellidos"/><br/>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass"
+        id="pass" maxlength="15" required/><br/>
+
+        <input type="submit" name="enviar" 
+        id="enviar" value="Registrar/Iniciar sesion"/>
+    </fieldset>
+    </form>
+    <h1 align="center" style="color: white;">Compra de boletos</h1>
+    <form method="post" action="" 
+    enctype="text/plain">
+    <fieldset style="color: white;">
+        <legend>Compra de boletos</legend>
+        <label for="correo">E-Mail</label><br/>
+        <input type="email" name="correo" id="correo" placeholder="Correo electronico"><br/>
+        <label for="usuario">Nombre de usuario:</label>
+        <input type="text" name="usuario" id="usuario" maxlength="12" placeholder="usuario" size="5" title="Nombre de usuario"/><br/>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass" maxlength="15" required/><br/>
+       
+        <h3>Selecciona tu metodo de pago</h3>
+        <input type="radio" name="tjc" id="tarjetac" value="c"/>
+       <label for="for=tarjetac">Tarjeta de credito</label><br/>
+
+       <input type="radio" name="tjc" id="tarjetad" value="d"/>
+       <label for="for=tarjetad">Tarjeta de debito</label><br/>
+       <input type="radio" name="tjc" id="trans" value="d"/>
+       <label for="for=trans">Transferencia</label><br/>
+
+       <h3>Selecciona fecha</h3>
+       <label for="semana">Semana:</label>
+        <input type="week" name="semana" id="semana"/><br/>
+        
+        <label for="fechahora">Fecha y hora:</label>
+        <input type="datetime-local" name="fechahora" id="fechahora"/><br/>
+        <h3>Selecciona una pelicula</h3>
+       <select size="5" multiple>
+        <optgroup label="Peliculas">
+        <option value="1" selected>Ant man and the Wasp: Quantumania</option>
+        <option value="2">Creed III</option>
+        <option value="3">Cocain Bear</option>
+        <option value="4">Gato con botas 2</option>
+        </optgroup>
+        <optgroup label="Proximamente">
+        <option value="7">The mandalorian</option>
+        <option value="8">The super Mario Bros Movie</option>
+        <option value="9">Shazam: Fury of the Gods</option>
+        <option value="10">Spider-man Across the spider-verse</option>
+    </optgroup>
+       </select>
+       <input type="submit" name="Realizar pedido" 
+        id="enviar" value="Realizar pedido"/>
+    </fieldset>
+
+    <h3 align="center" style="color: white;"><a href="EncuestaP3.html">Contesta esta pequeña encuesta para calificar nuestro servicio</a></h3>
+    <h3 align="right" style="color: white;">Nuestras redes sociales</h3>
+    <h2 align="right" style="color: white;">Garcia Valencia Aldo Esteban</h2>
+    <h2 align="right" style="color: white;">179862</h2>
+    <h2 align="right" style="color: red;"><img src="Youtube_logo.png" height="30px" width="30px"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a></h2>
+    <h2 align="right" style="color: blueviolet;"><img src="Circle-Facebook-Logo-PNG-Pic.png" height="30px" width="30px"><a href="https://www.facebook.com/">Facebook</a></h2>
+    <h2 align="right" style="color: yellow;"><img src="pngtree-instagram-icon-png-image_6315974.png" height="30px" width="30px"><a href="https://www.instagram.com/aldogv10/">Instagram</a></h2>
+</body>
+</html>
