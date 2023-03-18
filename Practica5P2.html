@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 5</title>
+    <link rel="stylesheet" href="EstilosP5.css">
+</head>
+<body>
+    <h1>Servicios de Internet y Telefonia</h1>
+    <h2>Contrato de servicios</h2>
+    <form method="post" action="" enctype="texte/plain">
+        <fieldset>
+            <legend>Datos del cliente</legend>
+            <table>
+                <tr>
+                        <th><label for="nombre">Nombre: </label></br>
+                        <input type="text" name="nombre" id="nombre" maxlength="25" placeholder="Nombre"/></th>
+                        <th><label for="ap">Apellido paterno: </label></br>
+                        <input type="text" name="ap" id="ap" maxlength="25" placeholder="Apellido paterno"/></th>
+                        <th><label for="am">Apellido materno:</label><br>
+                            <input type="text" name="am" id="am" maxlength="25" placeholder="Apellido materno"/></th>
+                </tr>
+                <tr>
+                    <th><select size="5" multiple>
+                        <optgroup label="Ciudad:">
+                        <option value="1">San Luis Potosi</option>
+                        <option value="2">Matehuala</option>
+                        <option value="3">Cd. Valles</option>
+                        <option value="4">Queretaro</option>
+                        <option value="5">Guanajuato</option>
+                        </optgroup></th>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    </br>
+
+    <form method="post" action="" enctype="texte/plain">
+        <fieldset id="ser">
+            <legend>Servicio a contratar</legend>
+            <label for="ser">Selecciona el tipo de servicio a contratar</label></br>
+            <input type="checkbox" name="forma1" id="forma1" value="ltf"/>
+            <label for="forma1">Linea telefonica</label>
+            <input type="checkbox" name="forma2" id="forma2" value="sdi"/>
+            <label for="forma2">Servicio de Internet</label>
+    </fieldset>
+    </form>
+
+    <form method="post" action="" enctype="texte/plain">
+        <fieldset id="forp">
+            <legend>Forma de pago</legend>
+            <label for="forp">Elige una forma de pago</label></br>
+            <input type="radio" name="forp" id="forp" value="TDC" />
+            <label for="forp">TDC</label><br>
+            <input type="radio" name="forp" id="forp" value="TD" />
+            <label for="forp">Tarjeta de debito</label><br>
+            <input type="radio" name="forp" id="forp" value="EF" selected/>
+            <label for="forp">Pago en efectivo</label><br>
+
+            <input type="radio" name="forp" id="forp" value="CH" />
+            <label for="forp">Pago mediante cheque</label><br>
+
+            <input type="radio" name="forp" id="forp" value="TB" />
+            <label for="forp">Transferencia Bancaria</label><br>
+
+            <input type="radio" name="forp" id="forp" value="DB" />
+            <label for="forp">Deposito bancario</label><br>
+
+            <input type="radio" name="forp" id="forp" value="PO" />
+            <label for="forp">Pago en oxxo</label><br>
+
+            <br>
+                <input name="boton" type="submit" value="Enviar">
+                <input name="boton" type="reset" value="Borrar">
+        </fieldset>
+    </form>
+
+    <h2 id="Titulo 2">Practica 5</h2>
+    <h2 id="Titulo 2">Garcia Valencia Aldo Esteban</h2>
+    <h2 id="Titulo 3">HTML Y CSS</h2>
+    <h2 id="Titulo 3">Primavera 2023</h2>
+</body>
+</html>

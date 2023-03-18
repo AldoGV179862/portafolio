@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    color: red;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+}
+
+legend{
+    color: white;
+    text-align: left;
+
+}
+
+th{
+    color: white;
+}
+
+label{
+    color: white;
+    text-align: center;
+}
+
+input{
+    color: white;
+    text-align: left;
+}
+
+table{
+    text-align: left;
+}
+
+#forp{
+    text-align: center;
+}
+
+#ser{
+    text-align: center;
+}
