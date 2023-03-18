@@ -1,0 +1,43 @@
+h2{
+    color: deepskyblue;
+    font-style: italic;
+    background-color: lightcoral;
+}
+
+#uno{
+    color: blueviolet;
+    font-style: italic;
+    font-size: 50px;
+    background-color: lightcoral;
+}
+
+p{
+    color: black;
+    text-align: justify;
+    background-color: lightcoral;
+}
+
+#textos{
+    color: goldenrod;
+    background-color: lightcoral;
+}
+blockquote{
+    color: yellowgreen;
+    background-color: lightcoral;
+}
+
+#dos{
+    color: blueviolet;
+    background-color: lightcoral;
+    font-style: italic;
+}
+
+h1{
+    color: yellow;
+    background-color: lightcoral;
+    font-size: 25px;
+}
+
+b{
+    background-color: lightcoral;
+}
