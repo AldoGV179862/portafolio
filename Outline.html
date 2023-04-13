@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de la propiedad outline en CSS</title>
+	<style>
+		/* Estilos para el enlace */
+		.link {
+			color: #007bff;
+			text-decoration: none;
+			font-size: 1.2em;
+			margin: 20px;
+			display: inline-block;
+			padding: 10px;
+			border: 2px solid #007bff;
+			border-radius: 5px;
+			transition: border-color 0.2s ease-in-out;
+		}
+		
+		/* Estilos para el enlace con focus */
+		.link:focus {
+			outline: 3px dotted #ff6600;
+			border-color: #ff6600;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejemplo de la propiedad outline en CSS</h1>
+	<p>Haz clic para ver cómo se aplica la propiedad outline al enfocar el enlace.</p>
+	<a href="#" class="link">Haz clic aquí</a>
+</body>
+</html>
