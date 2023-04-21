@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practica 2 - P3</title>
+  </head>
+  <body>
+    <h1>Operaciones matematicas</h1>
+    <form>
+      <label for="numero1">Escribe un número:</label>
+      <input type="number" id="numero1" name="numero1"><br><br>
+
+      <label for="numero2">Segundo número:</label>
+      <input type="number" id="numero2" name="numero2"><br><br>
+
+      <button type="button" onclick="calcular('suma')">Suma</button>
+      <button type="button" onclick="calcular('resta')">Resta</button>
+      <button type="button" onclick="calcular('multiplicacion')">Multiplicación</button>
+      <button type="button" onclick="calcular('division')">División</button>
+    </form>
+
+    <h2>El resultado es: </h2>
+    <p id="resultado"></p>
+
+    <script>
+      function calcular(operacion)
+{
+        var num1 = document.getElementById("numero1").value;
+        var num2 = document.getElementById("numero2").value;
+
+        var resultado;
+        switch (operacion) {
+          case "suma":
+            resultado = parseFloat(num1) + parseFloat(num2);
+            break;
+          case "resta":
+            resultado = parseFloat(num1) - parseFloat(num2);
+            break;
+          case "multiplicacion":
+            resultado = parseFloat(num1) * parseFloat(num2);
+            break;
+          case "division":
+            resultado = parseFloat(num1) / parseFloat(num2);
+            break;
+        }
+
+        
+        document.getElementById("resultado").innerHTML = "El resultado de la " + operacion + " es: " + resultado;
+}
+    </script>
+  </body>
+</html>
