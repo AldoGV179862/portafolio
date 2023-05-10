@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de APIs de JavaScript</title>
+  </head>
+  <body>
+    <h1>Ejemplos de APIs de JavaScript</h1>
+
+    <h2>API Web Storage</h2>
+    <p>La API Web Storage permite almacenar datos de forma persistente en el navegador. Se pueden usar dos tipos de almacenamiento: <code>localStorage</code> y <code>sessionStorage</code>.</p>
+    <p>Su importancia nos sirve evitar la necesidad de utilizar cookies.</p>
+    <button onclick="guardarNombre()">Guardar nombre</button>
+    <button onclick="mostrarNombre()">Mostrar nombre</button>
+    <p id="nombre-guardado"></p>
+    
+    <h2>API Forms</h2>
+    <p>La API Forms permite interactuar con los formularios HTML y y su importancia incide en validar los datos antes de enviarlos al servidor.</p>
+    <form onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+    <p id="mensaje-validacion"></p>
+    
+    <h2>API Web Worker</h2>
+    <p>La API Web Worker permite ejecutar scripts en segundo plano para evitar bloquear la interfaz de usuario.</p>
+    <p>Su importancia es grande porque al ejecutarse en segundo plano no molestará al usuario</p>
+    <button onclick="ejecutarCalculo()">Ejecutar cálculo</button>
+    <p id="resultado-calculo"></p>
+    
+    <h2>API fetch</h2>
+    <p>La API fetch permite enviar solicitudes HTTP desde el navegador y recibir respuestas.</p>
+    <p>Su importancia incide en la recepcion de respuestas desde el navegador</p>
+    <button onclick="obtenerDatos()">Obtener datos</button>
+    <p id="datos-obtenidos"></p>
+    
+    <h2>API Geolocation</h2>
+    <p>La API Geolocation permite obtener la ubicación del usuario mediante el uso de la información de su dispositivo.</p>
+    <p>Su importancia es grande porque nos puede servir para localizar ciertas direcciones como la del usuario</p>
+    <button onclick="obtenerUbicacion()">Obtener ubicación</button>
+    <p id="ubicacion-obtenida"></p>
+    
+    <h2>API History</h2>
+    <p>La API History proporciona una manera de navegar hacia atrás y adelante en la historia del navegador web.</p>
+    <p>Su importancia podria ser para un menu y regresar a la pestaña de atras o a la pestaña que se desea</p>
+    <button onclick="irAPagina('https://www.google.com')">Ir a Google</button>
+    <button onclick="regresar()">Regresar</button>
+  </body>
+  <script>
+    // Ejemplo de API Web Storage
+    function guardarNombre() {
+      var nombre = prompt("Introduce tu nombre:");
+      localStorage.setItem("nombre", nombre);
+    }
+    
+    function mostrarNombre() {
+      var nombre = localStorage.getItem("nombre");
+      document.getElementById("nombre-guardado").textContent = "Nombre guardado: " + nombre;
+    }
+    
+    // Ejemplo de API Forms
+    function validarFormulario() {
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      
+      if (nombre == "" || email == "") {
+        document.getElementById("mensaje-validacion").textContent = "Debes llenar todos los campos";
+        return false;
+      } else {
+        return true;
