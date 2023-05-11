@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<!-- Script de JavaScript para calcular la puntuación total de la encuesta -->
+<script>
+// Define una variable global para almacenar la puntuación total
+var total;
+
+// Esta función se llama cuando el usuario hace clic en el botón "Calificar"
+function califica() {
+    // Define una variable local para almacenar la puntuación total
+    var total=0;
+    // Recorre las 4 preguntas de la encuesta
+    for (var x=1;x<=4;x++) {
+        // Define una variable local para almacenar la respuesta a la pregunta actual
+        var res=0;
+        // Crea una cadena con el nombre de la pregunta actual
+        var nom="r"+x;
+        // Busca todos los elementos del formulario con el nombre de la pregunta actual
+        var resul=document.getElementsByName(nom);
+        // Recorre todas las opciones de respuesta de la pregunta actual
+        for(var i=0;i<resul.length;i++) {
+            // Si el usuario seleccionó esta opción, almacena su valor como la respuesta actual
+            if(resul[i].checked==true) {
+                res=parseInt(resul[i].value);
+            }
+        }
+        // Agrega la respuesta actual a la puntuación total
+        total=total+res;
+        // Muestra la puntuación parcial en la página web
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+    }
+    // Evalúa la puntuación total y muestra un mensaje de comentarios en la página web
+    if(total==20) {
+        document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+    } else if(total==15) {
+        document.getElementById("comentario").innerHTML="Regular!!";
+    } else if(total<=15) {
+        document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+}
+</script>
+<body>
+    <div id="contiene">
+    <h1>Responde la encuesta</h1>
+    <h2>Tu opinión es importante</h2>
+<form>
+<div>
+   
+    <ul>
+
+        <li>El mejor equipo del mundo?</li>
+        <input type="radio" name="r1" id="r1" value="5"/>Real madrid<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>FC Barcelona<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Manchester City<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Liverpool<br/>
+       
+        <li>La mejor banda de la historia</li>
+        <input type="radio" name="r2" id="r2" value="5"/>Caifanes<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Twenty One Pilots<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Queen<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Los Beatles<br/>
+
+        <li>El mejor futbolista de la historia</li>
+        <input type="radio" name="r3" id="r3" value="5"/>Harry Maguire<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Cristiano Ronaldo<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Leonel Messi<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Pele<br/>
+
+        <li>La mejor serie de marvel</li>
+        <input type="radio" name="r4" id="r4" value="5"/>Daredevil<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Moon Knight<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Loki<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>WandaVision<br/>
+    </ul>
+   
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
