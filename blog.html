@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog de Videojuegos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function guardarComentario() {
+            var nombre = document.getElementById("nombre").value;
+            var comentario = document.getElementById("comentario").value;
+            var comentariosAnteriores = JSON.parse(localStorage.getItem("comentarios")) || [];
+            var nuevoComentario = {nombre: nombre, comentario: comentario};
+            comentariosAnteriores.push(nuevoComentario);
+            localStorage.setItem("comentarios", JSON.stringify(comentariosAnteriores));
+            mostrarComentarios();
+        }
+
+        function mostrarComentarios() {
+            var comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+            var listaComentarios = document.getElementById("lista-comentarios");
+            var html = "";
+            for (var i = 0; i < comentarios.length; i++) {
+                html += "<li><strong>" + comentarios[i].nombre + ":</strong> " + comentarios[i].comentario + "</li>";
+            }
+            listaComentarios.innerHTML = html;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="blog.css">
+
+</head>
+<body onload="mostrarComentarios()" background="fondito.jpg">
+        <h1>Blog de comentarios</h1>
+
+        <nav>
+            <a  href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/Proyecto.html">Nuevos lanzamientos</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/noticias.html">Noticias actuales</a>
+            <a href="#">Foro de debate</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/preguntas.html">Preguntas</a>
+            <a class="active" href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/blog.html">Blog</a>
+            <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/trivia.html">Trivia</a>
+            <a href="">ChatBot</a>
+            <a href="">Tiendas</a>
+        </nav>
+        
+        <p>¿Que te parecio o que te parece el nuevo Resident Evil</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br>
+                <label for="comentario">Comentario o pregunta:</label><br>
+                <textarea id="comentario"></textarea><br>
+                <button type="button" onclick="guardarComentario()">Enviar</button>
+            </form>
+            <p>¿Crees que salga un trailer de GTA 6 este año?</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br>
+                <label for="comentario">Comentario o pregunta:</label><br>
+                <textarea id="comentario"></textarea><br>
+                <button type="button" onclick="guardarComentario()">Enviar</button>
+            </form>
+            <p>¿Que esperas del proximo Jedi survivor?/p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br>
+                <label for="comentario">Comentario o pregunta:</label><br>
+                <textarea id="comentario"></textarea><br>
+                <button type="button" onclick="guardarComentario()">Enviar</button>
+            </form>      
+            <p>¿Que deberia hacer warzone para no morir?</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br>
+                <label for="comentario">Comentario o pregunta:</label><br>
+                <textarea id="comentario"></textarea><br>
+                <button type="button" onclick="guardarComentario()">Enviar</button>
+            </form>
+</body>  

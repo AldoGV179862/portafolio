@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+</head>
+
+<h1>Trivia</h1>
+
+<nav>
+    <a  href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/Proyecto.html">Nuevos lanzamientos</a>
+    <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/noticias.html">Noticias actuales</a>
+    <a href="#">Foro de debate</a>
+    <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/preguntas.html">Preguntas</a>
+    <a href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/blog.html">Blog</a>
+    <a class="active" href="file:///C:/Users/MIGRANTES/Documents/renecito/ProyectoWeb/trivia.html">Trivia</a>
+    <a href="">ChatBot</a>
+    <a href="">Tiendas</a>
+</nav>
+<script>
+var total;
+function califica()
+    {var total=0;
+        for (var x=1;x<=4;x++)
+        {
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+            document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+            if(total==15)
+            document.getElementById("comentario").innerHTML="Regular!!";
+        else
+            if(total<=15)
+            document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+</script>
+
+<style>
+h1
+ {
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     display: block;
+     width: 400px;
+     padding: 20px;
+     border: 1px solid cadetblue;
+     text-align: center;
+     margin: 15px auto;
+     background: rgb(13, 4, 112);
+     -moz-border-radius: 20px 10px 40px 30px;
+     -webkit-border-radius: 20px 10px 40px 30px;
+     border-radius: 20px 10px 40px 30px;
+ 
+     -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
+     -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
+     box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+     color: #fff;
+ }
+
+ nav {
+			background-color: #333;
+			overflow: hidden;
+		}
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		.active {
+			background-color:blueviolet;
+			color: white;
+		}
+ 
+</style>
+
+<body background="fondito.jpg">
+    <div id="contiene">
+    <h2>¿Qué tan gamer eres?</h2>
+<form>
+<div>
+   
+    <ul>
+
+        <li>¿Cuál fue el primer videojuego de la historia?</li>
+        <input type="radio" name="r1" id="r1" value="5"/>OXO<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Mario Bros<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Ping Pong<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>Galaga<br/>
+       
+        <li>¿Cuál es un exclusivo de nintendo?</li>
+        <input type="radio" name="r2" id="r2" value="0"/>Halo Wars<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>God of War<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>Spider-Man<br/>
+        <input type="radio" name="r2" id="r2" value="5"/>Smash Bros<br/>
+
+        <li>¿Cuál de los siguiente videojuegos no es un clásico de ellos</li>
+        <input type="radio" name="r3" id="r3" value="5"/>Pac-Man<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Sonic<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Street Fighter<br/>
+        <input type="radio" name="r3" id="r3" value="5"/>Resident Evil<br/>
+
+        <li>¿Cuál de los siguientes videojuegos es un exclusivo de Xbox?</li>
+        <input type="radio" name="r4" id="r4" value="5"/>Halo<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>FIFA<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>GTA V<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>Minecraft<br/>
+    </ul>
+   
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
