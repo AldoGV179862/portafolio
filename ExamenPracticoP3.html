@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Descuento en tu compra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=YourFontFamily');
+
+    body {
+      font-family: 'Caveat', cursive, sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .custom-button {
+      background-color: #FF69B4;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .custom-button:hover {
+      background-color: #FF1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>Obten un descuento extra!</h1>
+  <p>Por favor, ingresa tu nombre y fecha de nacimiento:</p>
+  <form id="userInfoForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="birthdate">Fecha de nacimiento:</label>
+    <input type="date" id="birthdate" required>
+    <br>
+    <button type="button" class="custom-button" onclick="verificarDescuento()">Enviar</button>
+  </form>
+
+  <div id="discountMessage" class="hidden">
+    <p>¡Felicidades! Obtendrás un 10% de descuento en tu compra por ser el mes de tu cumpleaños :)</p>
+    <img src="descuento.png" alt="Descuento" style="height: 120px;">
+  </div>
+
+  <script>
+    function verificarDescuento() {
+      const name = document.getElementById('name').value;
+      const birthdate = new Date(document.getElementById('birthdate').value);
+
+      const userMonth = birthdate.getMonth();
+
+      if (userMonth === 4) {
+        document.getElementById('discountMessage').classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
