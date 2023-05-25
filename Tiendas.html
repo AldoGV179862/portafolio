@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tiendas cercanas</title>
+  <link rel="stylesheet" type="text/css" href="preguntas.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqGQjHPARNV91E2TgwB1mm2FNG0BL0HqI&libraries=places"></script>
+  <script>
+    function obtenerUbicacion() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          var location = new google.maps.LatLng(latitude, longitude);
+          
+          // Crear el mapa centrado en la ubicación actual
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 15
+          });
+          
+          // Crear una solicitud de lugares cercanos
+          var request = {
+            location: location,
+            radius: '500',
+            type: ['supermarket'] // Puedes cambiar el tipo de lugar según tus necesidades
+          };
+          
+          // Realizar la solicitud de lugares cercanos
+          var service = new google.maps.places.PlacesService(map);
+          service.nearbySearch(request, function(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+              for (var i = 0; i < results.length; i++) {
+                // Mostrar información de cada lugar encontrado
+                var place = results[i];
+                console.log(place.name); // se puede cambiar esto para mostrar los resultados en el formato que se requiere
+              }
+            }
+          });
+        });
+      } else {
+        alert("Lo siento, tu navegador no soporta la API Geolocation de HTML5");
+      }
+    }
+  </script>
+  <style>
+     body {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 100;
+            color: aliceblue;
+        }
+    .accordion {
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #f3f3f3;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: rgb(172, 15, 119);
+      overflow: hidden;
+      color: #ddd;
+    }
+
+    .panel.show {
+      display: block;
+    }
+    nav {
+          background-color: #333;
+          overflow: hidden;
+          display: flex;
+          justify-content: center; /* Centra horizontalmente */
+      }
+  
+      nav a {
+          float: left;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+      }
+  
+      nav a:hover {
+          background-color: #ddd;
+          color: black;
+      }
+  
+      .active {
+          background-color: blueviolet;
+          color: white;
+      }
+      h1 {
+          width: 400px;
+          margin: 15px auto;
+          padding: 20px;
+          text-align: center;
+          border: 1px solid cadetblue;
+          background-color: rgb(13, 4, 112);
+          color: white;
+          border-radius: 20px 10px 40px 30px;
+          box-shadow: 20px 10px 40px 30px rgb(77, 77, 228);
+      }
+  </style>
+</head>
+<body background="istockphoto-1145613646-640x640.jpg">
+    <nav>
+        <a href="https://aldogv179862.github.io/portafolio/Proyecto">Inicio</a>
+        <a href="https://aldogv179862.github.io/portafolio/noticias">Noticias actuales</a>
+        <a href="https://aldogv179862.github.io/portafolio/blog">Foro de debate</a>
+        <a href="https://aldogv179862.github.io/portafolio/preguntas">Contacto y preguntas frecuentes</a>
+        <a href="https://aldogv179862.github.io/portafolio/Trivia">Trivia</a>
+        <a href="https://aldogv179862.github.io/portafolioTiendas" class="active">Tiendas</a>
+    </nav>
+    <h1>Tiendas</h1>
+  <h2 align="center">Haz clic en el siguiente botón para obtener tu ubicación actual y ver tiendas cercanas:</h2>
+  <center><button onclick="obtenerUbicacion()">Obtener ubicación y buscar tiendas cercanas que vendan videojuegos</button></center>
+  <div id="map" style="width: 100%; height: 400px;"></div>
+</body>
+</html>
