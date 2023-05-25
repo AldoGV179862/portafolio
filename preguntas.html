@@ -4,54 +4,132 @@
     <meta charset="UTF-8">
     <title>Ayuda de Videojuegos</title>
     <link rel="stylesheet" type="text/css" href="preguntas.css">
-  </head>
-  <body background="fondito.jpg">
+    <style>
+      .accordion {
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+
+      .active, .accordion:hover {
+        background-color: #f3f3f3;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: rgb(172, 15, 119);
+        overflow: hidden;
+        color: #ddd;
+      }
+
+      .panel.show {
+        display: block;
+      }
+      nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+        }
     
-    <h1>Ayuda de Videojuegos</h1>
+        nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    
+        .active {
+            background-color: blueviolet;
+            color: white;
+        }
+        h1 {
+            width: 400px;
+            margin: 15px auto;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid cadetblue;
+            background-color: rgb(13, 4, 112);
+            color: white;
+            border-radius: 20px 10px 40px 30px;
+            box-shadow: 20px 10px 40px 30px rgb(77, 77, 228);
+        }
+    </style>
+    <script>
+      function toggleAccordion(id) {
+        var panel = document.getElementById(id);
+        panel.classList.toggle('show');
+      }
+    </script>
+  </head>
+  <body bgcolor="cadetblue">
+    
+    <h1>Preguntas frecuentes</h1>
 
     <nav>
-       <a href="https://aldogv179862.github.io/portafolio/Proyecto">Nuevos lanzamientos</a>
-        <a href="https://aldogv179862.github.io/portafolio/noticias">Noticias actuales</a>
-        <a href="">Foro de debate</a>
-        <a class="active" href="https://aldogv179862.github.io/portafolio/preguntas">Formulario de preguntas</a>
-        <a href="https://aldogv179862.github.io/portafolio/blog">Blog</a>
-        <a href="https://aldogv179862.github.io/portafolio/trivia">Trivia</a>
-        <a href="">ChatBot</a>
-        <a href="">Tiendas</a>
-        </nav>
+        <a href="#" class="active">Inicio</a>
+        <a href="#">Noticias actuales</a>
+        <a href="#">Foro de debate</a>
+        <a href="#">Preguntas frecuentes y contacto</a>
+        <a href="#">Trivia</a>
+        <a href="#">Tiendas</a>
+    </nav>
     
    
-    <h2>Preguntas Frecuentes</h2>
-    <dl>
-      <dt>¿Cómo puedo mejorar mi rendimiento en los juegos?</dt>
-      <dd>Prueba a ajustar la configuración gráfica del juego para obtener una mejor tasa de fotogramas por segundo. También puede ayudar a cerrar otros programas que estén utilizando recursos del sistema y a desfragmentar el disco duro.</dd>
-     
-      <dt>¿Por qué mi juego se congela o se bloquea?</dt>
-      <dd>Esto podría deberse a una variedad de factores, como problemas de hardware, controladores obsoletos, sobrecalentamiento del sistema o conflictos con otros programas. Intenta actualizar tus controladores y asegúrate de que tu sistema esté bien ventilado y no sobrecalentado.</dd>
-     
-      <dt>¿Cómo puedo unirme a un clan o comunidad de videojuegos?</dt>
-      <dd>Busca en línea grupos o comunidades dedicados a tus juegos favoritos. También puedes unirte a grupos en redes sociales como Facebook o Discord.</dd>
-     
-      <dt>¿Cómo puedo reportar a un jugador que está haciendo trampas?</dt>
-      <dd>La mayoría de los juegos tienen una función de denuncia en el juego o en el sitio web oficial del juego. Utiliza esta función para informar a los desarrolladores del juego sobre cualquier actividad sospechosa.</dd>
-    </dl>
+    <h2 class="accordion" onclick="toggleAccordion('faq')">Preguntas Frecuentes</h2>
+    <div class="panel" id="faq">
+      <dl>
+        <dt>¿Cómo puedo mejorar mi rendimiento en los juegos?</dt>
+        <dd>Prueba a ajustar la configuración gráfica del juego para obtener una mejor tasa de fotogramas por segundo. También puede ayudar a cerrar otros programas que estén utilizando recursos del sistema y a desfragmentar el disco duro.</dd>
+       
+        <dt>¿Por qué mi juego se congela o se bloquea?</dt>
+        <dd>Esto podría deberse a una variedad de factores, como problemas de hardware, controladores obsoletos, sobrecalentamiento del sistema o conflictos con otros programas. Intenta actualizar tus controladores y asegúrate de que tu sistema esté bien ventilado y no sobrecalentado.</dd>
+       
+        <dt>¿Cómo puedo unirme a un clan o comunidad de videojuegos?</dt>
+        <dd>Busca en línea grupos o comunidades dedicados a tus juegos favoritos. También puedes unirte a grupos en redes sociales como Facebook o Discord.</dd>
+   <dt>¿Cómo puedo reportar a un jugador que está haciendo trampas?</dt>
+        <dd>La mayoría de los juegos tienen una función de denuncia en el juego o en el sitio web oficial del juego. Utiliza esta función para informar a los desarrolladores del juego sobre cualquier actividad sospechosa.</dd>
+      </dl>
+    </div>
    
-    <h2>Grupos de ayuda</h2>
-    <ul>
-      <li><a href="https://www.reddit.com/r/gaming/">r/gaming</a> - subreddit dedicado a juegos en general</li>
-      <li><a href="https://www.reddit.com/r/pcgaming/">r/pcgaming</a> - subreddit dedicado a juegos de PC</li>
-      <li><a href="https://www.reddit.com/r/xbox/">r/xbox</a> - subreddit dedicado a juegos de Xbox</li>
-      <li><a href="https://www.reddit.com/r/PS4/">r/PS4</a> - subreddit dedicado a juegos de PlayStation 4</li>
-      <li><a href="https://www.reddit.com/r/NintendoSwitch/">r/NintendoSwitch</a> - subreddit dedicado a juegos de Nintendo Switch</li>
-    </ul>
+    <h2 class="accordion" onclick="toggleAccordion('helpGroups')">Grupos de ayuda</h2>
+    <div class="panel" id="helpGroups">
+      <ul>
+        <li><a href="https://www.reddit.com/r/gaming/">r/gaming</a> - subreddit dedicado a juegos en general</li>
+        <li><a href="https://www.reddit.com/r/pcgaming/">r/pcgaming</a> - subreddit dedicado a juegos de PC</li>
+        <li><a href="https://www.reddit.com/r/xbox/">r/xbox</a> - subreddit dedicado a juegos de Xbox</li>
+        <li><a href="https://www.reddit.com/r/PS4/">r/PS4</a> - subreddit dedicado a juegos de PlayStation 4</li>
+        <li><a href="https://www.reddit.com/r/NintendoSwitch/">r/NintendoSwitch</a> - subreddit dedicado a juegos de Nintendo Switch</li>
+      </ul>
+    </div>
    
-    <h2>Redes Sociales</h2>
-    <ul>
-      <li><a href="https://www.facebook.com/gaming/">Facebook Gaming</a> - plataforma de streaming de juegos en Facebook</li>
-      <li><a href="https://www.youtube.com/gaming">YouTube Gaming</a> - plataforma de streaming de juegos en YouTube</li>
-      <li><a href="https://discord.gg/">Discord</a> - aplicación de chat y voz utilizada por comunidades de juegos</li>
-      <li><a href="https://twitter.com/search?q=%23gaming&src=typed_query">Twitter Gaming</a> - cuenta de Twitter dedicada a videojuegos</li>
-    </ul>
+    <h2 class="accordion" onclick="toggleAccordion('socialMedia')">Redes Sociales</h2>
+    <div class="panel" id="socialMedia">
+      <ul>
+        <li><a href="https://www.facebook.com/gaming/">Facebook Gaming</a> - plataforma de streaming de juegos en Facebook</li>
+        <li><a href="https://www.youtube.com/gaming">YouTube Gaming</a> - plataforma de streaming de juegos en YouTube</li>
+        <li><a href="https://discord.gg/">Discord</a> - aplicación de chat y voz utilizada por comunidades de juegos</li>
+        <li><a href="https://twitter.com/search?q=%23gaming&src=typed_query">Twitter Gaming</a> - cuenta de Twitter dedicada a videojuegos</li>
+      </ul>
+    </div>
+    
+    <script>
+      function toggleAccordion(id) {
+        var panel = document.getElementById(id);
+        panel.classList.toggle('show');
+      }
+    </script>
   </body>
 </html>
-
