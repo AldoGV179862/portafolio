@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <script src="Formulario.js"></script>
+    <link rel="stylesheet" href="Formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+
+</head>
+<body background="istockphoto-1145613646-640x640.jpg">
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Noticias actuales</a>
+        <a href="#">Foro de debate</a>
+        <a href="#">Contacto</a>
+        <a href="#" class="active">Trivia</a>
+        <a href="#">Tiendas</a>
+    </nav>
+    <div id="contiene">
+        <h1>¿Qué tan gamer eres?</h1>
+    <form>
+    <div id="preguntas">
+        
+        <ul>
+    
+            <li>¿Cuál fue el primer videojuego de la historia?</li>
+            <input type="radio" name="r1" id="r1" value="5"/>Ping Pong<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Mario Bros<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>XO<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Galaga<br/>
+            
+            <li>¿Cuál es un exclusivo de nintendo?</li>
+            <input type="radio" name="r2" id="r2" value="5"/>Smash Bros<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>God of War<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Spider-Man<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Halo<br/>
+    
+            <li>¿Cuál de los siguiente videojuegos no es un clásico de ellos</li>
+            <input type="radio" name="r3" id="r3" value="5"/>Pac-Man<br/>
+            <input type="radio" name="r3" id="r3" value="0"/>Sonic<br/>
+            <input type="radio" name="r3" id="r3" value="0"/>Street Fighter<br/>
+            <input type="radio" name="r3" id="r3" value="0"/>Resident Evil<br/>
+    
+            <li>¿Cuál de los siguientes videojuegos es un exclusivo de Xbox?</li>
+            <input type="radio" name="r4" id="r4" value="5"/>Halo<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>FIFA<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>GTA V<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>God of War<br/>
+            
+            <li>¿Cual de estas consolas es la mas vendido de la historia?</li>
+            <input type="radio" name="r5" id="r5" value="5"/>PS1<br/>
+            <input type="radio" name="r5" id="r5" value="0"/>PS2<br/>
+            <input type="radio" name="r5" id="r5" value="0"/>Xbox 360<br/>
+            <input type="radio" name="r5" id="r5" value="0"/>Nindento 64<br/>
+        </ul>
+        
+    </div>
+    <input type="button" value="Calificar" onclick="califica()">
+    <input type="button" value="Generar" onclick="generar()">
+    </form>
+    <p></p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <iframe frameborder="0" width="600" height="500"></iframe>
+    </div>
+    </body>
+</html>
