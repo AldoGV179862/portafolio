@@ -6,91 +6,129 @@
 
     <style>
         body {
-            background-size: 100% 100%; 
+            background-size: cover; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
+            background-image: url("fondito.jpg");
             opacity: 100;
             color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-		nav {
-			background-color: #333;
-			overflow: hidden;
-		}
-		nav a {
-			float: left;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
-		nav a:hover {
-			background-color: #ddd;
-			color: black;
-		}
-		.active {
-			background-color:blueviolet;
-			color: white;
-		}
 
-        h1
-        {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            display: block;
+        h1 {
             width: 400px;
-            padding: 20px;
-            border: 1px solid cadetblue;
-            text-align: center;
             margin: 15px auto;
-            background: rgb(13, 4, 112);
-            -moz-border-radius: 20px 10px 40px 30px;
-            -webkit-border-radius: 20px 10px 40px 30px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid cadetblue;
+            background-color: rgb(13, 4, 112);
+            color: white;
             border-radius: 20px 10px 40px 30px;
-
-            -moz-box-shadow: rgb(228, 248, 224) 20px 10px 40px 30px;
-            -webkit-box-shadow: rgb(126, 96, 202) 20px 10px 40px 30px;
-            box-shadow: rgb(77, 77, 228) 20px 10px 40px 30px;
+            box-shadow: 20px 10px 40px 30px rgb(77, 77, 228);
         }
 
-	</style>
-</head>
-<body background="fondito.jpg">
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    <h1>Noticias de Videojuegos actuales</h1> 
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .active {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .noticia1,
+        .noticia2,
+        .noticia3,
+        .noticia4 {
+            width: 600px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .noticia1 h2,
+        .noticia2 h2,
+        .noticia3 h2,
+        .noticia4 h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .noticia1 p,
+        .noticia2 p,
+        .noticia3 p,
+        .noticia4 p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .noticia1 iframe,
+        .noticia2 iframe,
+        .noticia3 iframe,
+        .noticia4 iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Noticias actuales</h1> 
     
     <nav>
-          <a href="https://aldogv179862.github.io/portafolio/Proyecto">Nuevos lanzamientos</a>
+        <a href="https://aldogv179862.github.io/portafolio/Proyextos">Inicio</a>
         <a class="active" href="https://aldogv179862.github.io/portafolio/noticias">Noticias actuales</a>
         <a href="#">Foro de debate</a>
-        <a href="https://aldogv179862.github.io/portafolio/preguntas">Formulario de preguntas</a>
+        <a href="https://aldogv179862.github.io/portafolio/preguntas">Preguntas</a>
         <a href="https://aldogv179862.github.io/portafolio/blog">Blog</a>
-        <a href="https://aldogv179862.github.io/portafolio/trivia">Trivia</a>
-        <a href="">ChatBot</a>
+        <a href="https://aldogv179862.github.io/portafolio/Trivia">Trivia</a>
         <a href="">Tiendas</a>
-        </nav>
+    </nav>
    
     <div class="noticia1">
         <h2>Nuevo trailer de Jedi Survivor!</h2>
-        <p>Se ha liberado un nuevo trailer del videojuego de star wars "Jedi Survivor", secuela del titulo "Jedi Fallen order". Donde podemos ver por un milisegundo a un personaje que derrotamos en el primer juego.</p>
+        <p>Se ha liberado un nuevo trailer del videojuego de Star Wars "Jedi Survivor", secuela del título "Jedi Fallen Order". Donde podemos ver por un milisegundo a un personaje que derrotamos en el primer juego.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/4jRvNM22H18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
    
     <div class="noticia2">
-        <h2>Asi se ve el nuevo Resident Evil 4 remake</h2>
-        <p>Ya esta disponible el "nuevo" Resident Evil 4. El remake de este clasico juego que se ve increible.</p>
+        <h2>Así se ve el nuevo Resident Evil 4 remake</h2>
+        <p>Ya está disponible el "nuevo" Resident Evil 4. El remake de este clásico juego que se ve increíble.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9p0YVZy2hXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
    
     <div class="noticia3">
-        <h2>The last of us part 1 en PC... ¿rompe computadoras?</h2>
-        <p>El famoso juego de play station llego a PC pero no de la panera que esperaban... Ya que este port presenta multiples fallas, bugs y pide muchisimos requerimientos para que se pueda correr decentemente.</p></br>
-        <p>Incluso hay usuarios que han reportado que literalmente les han descompuesto algun componente de la PC, como la tarjeta o mismo procesador</p>
+        <h2>The Last of Us Part 1 en PC... ¿Rompe computadoras?</h2>
+        <p>El famoso juego de PlayStation llegó a PC pero no de la manera que esperaban... Ya que este port presenta múltiples fallas, bugs y pide muchos requisitos para que se pueda correr decentemente.</p>
+        <p>Incluso hay usuarios que han reportado que literalmente les han descompuesto algún componente de la PC, como la tarjeta o mismo procesador.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/XnQCXjvCsUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
    
     <div class="noticia4">
-        <h2>Asi se ve el nuevo creativo 2.0 de Fornite</h2>
-        <p>El crativo 2.0 de fortnite se ve increible, sera como funciona Roblox pero con el motor Unreal Engine que usa Fornite para crear locuras como esto...</p>
+        <h2>Así se ve el nuevo creativo 2.0 de Fortnite</h2>
+        <p>El creativo 2.0 de Fortnite se ve increíble, será como funciona Roblox pero con el motor Unreal Engine que usa Fortnite para crear locuras como esto...</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/J4hhcOl_uRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </body>
